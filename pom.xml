@@ -20,7 +20,7 @@
 
 	<properties>
 
-		<java.version>14</java.version>
+		<java.version>8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -57,6 +57,14 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+	    <groupId>com.idspeedy</groupId>
+	    <artifactId>idspeedy</artifactId>
+	    <version>1.0</version>
+	    <scope>system</scope>
+	    <systemPath>${project.basedir}/idflakies.jar</systemPath>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -78,6 +86,41 @@
 				</dependencies>
 			</plugin>
 
+			<!-- <plugin>
+			   <groupId>org.apache.maven.plugins</groupId>
+			   <artifactId>maven-install-plugin</artifactId>
+			   <version>2.5.1</version>
+			   <configuration>
+
+					 <filters>
+						 <filter>
+							 <artifact>*:*</artifact>
+							 <excludes>
+									<exclude>META-INF/*.SF</exclude>
+									<exclude>META-INF/*.DSA</exclude>
+									<exclude>META-INF/*.RSA</exclude>
+							 </excludes>
+						 </filter>
+					 </filters>
+
+			      <groupId>edu.illinois.cs</groupId>
+			      <artifactId>idflakies</artifactId>
+			      <version>1.0.3-SNAPSHOT</version>
+			      <packaging>jar</packaging>
+			      <file>${basedir}/idflakies.jar</file>
+			      <generatePom>true</generatePom>
+			   </configuration>
+			   <executions>
+			      <execution>
+			         <id>install-jar-lib</id>
+			         <goals>
+			            <goal>install-file</goal>
+			         </goals>
+			         <phase>validate</phase>
+			      </execution>
+			   </executions>
+			</plugin> -->
+
 			<plugin>
             <groupId>edu.illinois.cs</groupId>
             <artifactId>testrunner-maven-plugin</artifactId>
@@ -87,15 +130,16 @@
                     <groupId>edu.illinois.cs</groupId>
                     <artifactId>idflakies</artifactId>
                     <!-- Use iDFlakies from Maven Central -->
-                    <version>1.0.2</version>
+                    <!-- <version>1.0.2</version> -->
                     <!-- Use the following version instead if you build iDFlakies locally and want to use the locally built version. -->
-                    <!-- <version>1.0.3-SNAPSHOT</version> -->
+                    <version>1.0.3-SNAPSHOT</version>
                 </dependency>
             </dependencies>
             <configuration>
                 <className>edu.illinois.cs.dt.tools.detection.DetectorPlugin</className>
             </configuration>
         </plugin>
+
 
 		</plugins>
 	</build>
