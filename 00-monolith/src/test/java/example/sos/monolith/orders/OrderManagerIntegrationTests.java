@@ -68,4 +68,10 @@ public class OrderManagerIntegrationTests {
 		assertThatExceptionOfType(InsufficientStock.class) //
 				.isThrownBy(() -> completingAnOrderUpdatesInventory());
 	}
+
+	@Test
+	public void newTest() {
+
+			int i = 0;
+	}
 }
