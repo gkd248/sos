@@ -1,3 +1,4 @@
 example.sos.monolith.orders.OrderManagerIntegrationTests.completingAnOrderUpdatesInventory
+example.sos.monolith.orders.OrderManagerIntegrationTests.brandNewTest
 example.sos.monolith.orders.OrderManagerIntegrationTests.throwsExceptionInCaseProductIsOutOfStock
 example.sos.monolith.orders.OrderManagerIntegrationTests.newTest

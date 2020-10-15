@@ -74,4 +74,9 @@ public class OrderManagerIntegrationTests {
 
 			int i = 0;
 	}
+
+	@Test
+	public void brandNewTest() {
+		int p = 2;
+	}
 }
